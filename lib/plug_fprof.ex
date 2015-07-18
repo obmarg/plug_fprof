@@ -1,0 +1,2 @@
+defmodule PlugFprof do
+end

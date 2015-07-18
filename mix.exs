@@ -5,6 +5,8 @@ defmodule PlugFprof.Mixfile do
     [app: :plug_fprof,
      version: "0.0.1",
      elixir: "~> 1.0",
+     description: description,
+     package: package,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -28,5 +30,17 @@ defmodule PlugFprof.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     []
+  end
+
+  defp description do
+    """
+    A Plug that adds fprof tracing to requests, to allow for easy profiling.
+    """
+  end
+
+  defp package do
+    [contributors: ["Graeme Coupar"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/obmarg/plug_fprof"}]
   end
 end
